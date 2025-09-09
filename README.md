@@ -23,7 +23,7 @@ Project Workflow
      Clean missing values and format dates.
      Compute derived fields like 30-day readmission.
      Export cleaned CSV for Power BI: claims_for_bi.csv
-     # python src/etl.py --input data/claims.csv --beneficiaries data/beneficiaries.csv --db data/claims.db
+      python src/etl.py --input data/claims.csv --beneficiaries data/beneficiaries.csv --db data/claims.db
 2. SQL Analysis
    Example queries:
      Total claims per provider
@@ -55,11 +55,11 @@ Project Workflow
 5. How to Run
     Clone the repo.
     Create Python environment:
-      # conda create -n claims python=3.11 -y
-      # conda activate claims
-      # pip install -r requirements.txt
+       conda create -n claims python=3.11 -y
+       conda activate claims
+       pip install -r requirements.txt
     Run ETL to generate cleaned CSV:
-      # python src/etl.py --input data/claims.csv --beneficiaries data/beneficiaries.csv --db data/claims.db
+       python src/etl.py --input data/claims.csv --beneficiaries data/beneficiaries.csv --db data/claims.db
 Open Power BI → Get Data → Text/CSV → data/clean/claims_for_bi.csv → load dashboard visuals.
 
 6. Folder Structure
